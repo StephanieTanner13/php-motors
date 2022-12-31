@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap');
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*Entire Page*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Arvo', serif;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+p,
+a,
+span {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #14191a;
+}
+
+/*Header Section*/
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+header a {
+    margin-right: 2em;
+    text-decoration: none;
+    color: black;
+}
+
+header a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/*Navigation*/
+nav {
+    background-color: #3a3a3a;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1em;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    margin-right: 1em;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: white;
+
+}
+
+nav a:hover {
+    background-color: #74adc2;
+    margin-top: .2em;
+    margin-bottom: .2em;
+    padding: 1em 0em;
+    color: #3a3a3a;
+}
+
+nav a:active {
+    background-color: #74adc2;
+    margin-top: .2em;
+    margin-bottom: .2em;
+    padding: 1em 0em;
+    color: #3a3a3a;
+}
+
+/*Main Section on Home Page*/
+.callout {
+    color: #74adc2;
+    font-size: smaller;
+    margin-left: 2em;
+    margin-top: 2em;
+    position: relative;
+    z-index: 5;
+}
+
+.callout p {
+    margin-top: -1em;
+}
+
+.delorean {
+    width: 90%;
+    height: auto;
+    position: relative;
+    z-index: -2;
+    margin-top: -3em;
+    margin-bottom: 1em;
+}
+
+.upgrades {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.upgrades div {
+    background-color: #74adc2;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: .5em;
+    padding: 1em;
+}
+
+.upgrades img {
+    height: 100px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    background-color: #74adc2;
+    color: #3a3a3a;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em 0em;
+    font-size: 1.5em;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #3a3a3a;
+}
+
+/*Display the list of vehicles in the classification view*/
+.inv-display img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: auto;
+}
+.inv-display h2{
+    text-align: center;
+}
+.inv-display{
+    max-width: 250px;
+}
+#inv-display {
+    margin: 2em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+#inv-display li {
+    margin-bottom: 2em;
+    border: 1px #ccc solid;
+    list-style-type: none;
+    flex: 1 1 auto;
+    margin: 2em;
+    text-align: center;
+}
+
+hr {
+    border: 2px solid black;
+    width: 150px;
+}
+/*Vehicle Information Pages*/
+#invPageImage{
+    display: block;
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.column{
+    display: flex;
+    flex-flow: column;
+}
+.thumbnail{
+    max-width: 100px;
+}
+.thumbnailSection{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-left: 2em;
+    padding-bottom: .2em;
+}
+/*Footer*/
+footer {
+    margin-top: 2em;
+    border-top: 4px solid #3a3a3a;
+    text-align: center;
+    line-height: 0.8;
+    font-size: .8em;
+}
+
+/*Login and registration Pages
+original idea from https://codepen.io/brisbold/pen/MWKXbyz
+*/
+.form {
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 6px gray;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form span {
+    font-size: .8em;
+}
+
+.input-border {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.text {
+    width: 97%;
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 2px solid gray;
+    background: none;
+    font-size: 18px;
+    color: black;
+}
+
+.border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: .5s;
+}
+
+.text:focus~.border,
+.text:valid~.border {
+    width: 100%;
+}
+
+label {
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    color: gray;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.text:focus~label,
+.text:valid~label {
+    top: -12px;
+    left: 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px gray;
+    font-size: 1.2em;
+    border: none;
+    background-color: white;
+    margin-top: 2em;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    transition-duration: .5s;
+}
+
+.form a {
+    text-decoration: none;
+    color: black;
+    font-size: smaller;
+}
+
+.form a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.normal-label {
+    position: absolute;
+    top: -20px;
+    left: 14px;
+    color: black;
+    font-size: 18px;
+}
+
+.normal-border.input-border {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    padding-top: 1em;
+    margin-bottom: 30px;
+}
+
+/*form on uploads image view*/
+.imageForm{
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 6px gray;
+}
+.imageForm label{
+    position: static;
+    color: black;
+}
+.imageForm fieldset{
+    border: none;
+    margin-left: -.8em;
+}
+.imageForm .btn{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*image management page*/
+#image-display{
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+}
+.galleryDisplay{
+    width: 250px;
+    display: inline-block;
+}
+
+/*reviews section of the vehicle information pages*/
+.center{
+    text-align: center;
+}
+
+.singleReview{
+    width: 80%;
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 6px gray;
+}
+
+@media only screen and (min-width: 900px) {
+    html {
+        background: #ece7eb;
+    }
+
+    body {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        background-color: white;
+        border: 4px solid #74adc2;
+        border-radius: 5px;
+    }
+
+    .bottomSections {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+
+    }
+
+    .callout {
+        font-size: larger;
+        margin-left: 4em;
+        margin-top: 2em;
+        position: relative;
+        z-index: 5;
+    }
+
+    .delorean {
+        width: 90%;
+        height: auto;
+        z-index: 3;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section li {
+        padding-right: 1em;
+        padding-top: 1em;
+    }
+
+    .button {
+        position: relative;
+        z-index: 4;
+        top: -400px;
+        left: -350px;
+        font-size: 1em;
+        width: 150px;
+    }
+
+    /* For vehicle display in classification view */
+    #inv-display {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    #inv-display h2 {
+        font-size: 1rem;
+    }
+
+    #inv-display li {
+        width: 200px;
+        flex: 1 0 auto;
+        text-align: center;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #inv-display div {
+        width: 100%;
+    }
+    /*Vehicle Information Pages*/
+#invPageImage{
+    width: 600px;
+    height:auto;
+}
+.vehicleInformation{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.column{
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+.thumbnail:hover{
+    transform: scale(1.5);
+}
+.thumbnailSection{
+    flex-flow: column wrap;
+    margin-top: -3em;
+    align-items: flex-start;
+}
+
+
+}
